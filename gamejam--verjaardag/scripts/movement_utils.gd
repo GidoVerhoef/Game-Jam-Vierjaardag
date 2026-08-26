@@ -5,28 +5,30 @@ static func get_path_to_tile(
 	start_pos: Vector2,
 	target_pos: Vector2,
 	tilemap: TileMapLayer,
-	blocked_layer: TileMapLayer
+	blocked_layers: Array[TileMapLayer]
 ) -> PackedVector2Array:
-	print("Start pos (world): ", start_pos)
-	print("Target pos (world): ", target_pos)
+	#print("Start pos (world): ", start_pos)
+	#print("Target pos (world): ", target_pos)
 	
 	# Convert world positions to tile coordinates
 	var start_tile = tilemap.local_to_map(start_pos)
 	var end_tile = tilemap.local_to_map(target_pos)
 	
-	print("Start tile (map): ", start_tile)
-	print("End tile (map): ", end_tile)
+	#print("Start tile (map): ", start_tile)
+	#print("End tile (map): ", end_tile)
 	
 	# If start and end are the same tile, return empty path
 	if start_tile == end_tile:
-		print("Start and end tiles are the same")
+		#print("Start and end tiles are the same")
 		return PackedVector2Array([])
 	
 	# Get all walkable tiles (excluding blocked tiles)
 	var all_tiles = tilemap.get_used_cells()
-	var blocked_tiles = blocked_layer.get_used_cells()
+	var blocked_tiles: Array[Vector2i] = []
+	for layer in blocked_layers:
+		blocked_tiles.append_array(layer.get_used_cells())
 	var walkable_tiles = all_tiles.filter(func(tile): return not blocked_tiles.has(tile))
-	print("Total tiles: ", all_tiles.size(), ", Blocked tiles: ", blocked_tiles.size(), ", Walkable tiles: ", walkable_tiles.size())
+	#print("Total tiles: ", all_tiles.size(), ", Blocked tiles: ", blocked_tiles.size(), ", Walkable tiles: ", walkable_tiles.size())
 	
 	# Create AStar2D pathfinder
 	var astar = AStar2D.new()
@@ -54,7 +56,7 @@ static func get_path_to_tile(
 	
 	# Return empty path if either start or end is not in the graph
 	if not astar.has_point(start_id) or not astar.has_point(end_id):
-		print("No valid path: start or end point not in graph")
+		#print("No valid path: start or end point not in graph")
 		return PackedVector2Array([])
 	
 	# Get path in tile coordinates
@@ -68,9 +70,9 @@ static func get_path_to_tile(
 		var world_pos = tilemap.map_to_local(Vector2i(tile_pos))
 		# Include all points to ensure precise center-to-center movement
 		world_path.append(world_pos)
-		print("Adding world pos to path: ", world_pos)
+		#print("Adding world pos to path: ", world_pos)
 	
-	print("Final path length: ", world_path.size())
+	#print("Final path length: ", world_path.size())
 	if world_path.is_empty():
 		print("Warning: Generated path is empty!")
 	else:

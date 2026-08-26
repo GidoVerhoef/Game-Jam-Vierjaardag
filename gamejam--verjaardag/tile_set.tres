@@ -1,0 +1,31 @@
+[gd_resource type="TileSet" format=3 uid="uid://dxac3g34uc6vk"]
+
+[ext_resource type="Texture2D" uid="uid://d4vprq3cyb2j" path="res://assets/kenney_isometric-blocks/Tilesheet/tilesheet_complete.png" id="1_kfwk1"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jyhfs"]
+texture = ExtResource("1_kfwk1")
+texture_region_size = Vector2i(111, 128)
+17:2/0 = 0
+17:2/0/texture_origin = Vector2i(0, -31)
+16:2/0 = 0
+16:2/0/texture_origin = Vector2i(0, -31)
+18:1/0 = 0
+18:1/0/texture_origin = Vector2i(0, -31)
+20:1/0 = 0
+20:1/0/texture_origin = Vector2i(0, -31)
+4:5/0 = 0
+4:5/0/texture_origin = Vector2i(0, -31)
+3:5/0 = 0
+3:5/0/texture_origin = Vector2i(0, -31)
+2:5/0 = 0
+2:5/0/texture_origin = Vector2i(0, -31)
+7:2/0 = 0
+7:2/0/texture_origin = Vector2i(0, -31)
+0:2/0 = 0
+0:2/0/texture_origin = Vector2i(0, -31)
+
+[resource]
+tile_shape = 1
+tile_layout = 5
+tile_size = Vector2i(111, 64)
+sources/0 = SubResource("TileSetAtlasSource_jyhfs")

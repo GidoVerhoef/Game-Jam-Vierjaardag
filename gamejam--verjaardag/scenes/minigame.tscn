@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cdd8hg6fbll64"]
+
+[ext_resource type="Script" uid="uid://blnaeduo53hgm" path="res://scenes/minigame.gd" id="1_5iev5"]
+[ext_resource type="Script" uid="uid://dw8iidw3qmdim" path="res://scenes/minigame_example.gd" id="2_hwsak"]
+
+[node name="Minigame_Example" type="Node2D" unique_id=568703234]
+script = ExtResource("1_5iev5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=322323245]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=804206698]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=1567081019]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.64705884, 0.7764706, 0.8901961, 0.6313726)
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/ColorRect" unique_id=2091119227]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = -15.5
+offset_right = 59.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "End Minigame"
+script = ExtResource("2_hwsak")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="CanvasLayer/Control/ColorRect/Button" to="CanvasLayer/Control/ColorRect/Button" method="_on_pressed"]

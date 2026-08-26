@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://od6j4ke36oyl" path="res://scripts/interaction_manager.gd" id="6_jkv2x"]
 [ext_resource type="Script" uid="uid://brk78ke8coluv" path="res://scripts/interactable.gd" id="8_jbj1t"]
 [ext_resource type="TileSet" uid="uid://6miaf07w7twv" path="res://tileset.tres" id="9_muem4"]
+[ext_resource type="Script" uid="uid://cou0x0vregfmu" path="res://minigame_manager.gd" id="10_dp3eg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_krr40"]
 
@@ -18,7 +19,7 @@ script = ExtResource("1_choun")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=372238811]
 
-[node name="Control_pausemenu" type="Control" parent="CanvasLayer" unique_id=1794558817]
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1794558817]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -28,12 +29,12 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PauseMenu" type="Node2D" parent="CanvasLayer/Control_pausemenu" unique_id=248871381]
+[node name="PauseMenu" type="Node2D" parent="CanvasLayer/Control" unique_id=248871381]
 process_mode = 3
 visible = false
 script = ExtResource("2_ya4ey")
 
-[node name="Button" type="Button" parent="CanvasLayer/Control_pausemenu/PauseMenu" unique_id=1838137358]
+[node name="Button" type="Button" parent="CanvasLayer/Control/PauseMenu" unique_id=1838137358]
 z_index = 4
 offset_left = -35.0
 offset_top = -15.5
@@ -42,19 +43,19 @@ offset_bottom = 15.5
 text = "Resume"
 
 [node name="Control_minigame" type="Control" parent="CanvasLayer" unique_id=518242715]
-visible = false
-clip_contents = true
 layout_mode = 3
-anchor_left = 0.071
-anchor_top = 0.120000005
-anchor_right = 0.89500004
-anchor_bottom = 0.86600006
-offset_left = 0.20800018
-offset_top = 0.23999786
-offset_right = -0.040039063
-offset_bottom = -0.16802979
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control_minigame" unique_id=584864853]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Tilemap" type="Node2D" parent="." unique_id=380715323]
 process_mode = 1
@@ -108,4 +109,7 @@ tile_set = ExtResource("9_muem4")
 tile_map_data = PackedByteArray("AADs/wYAAQACAAEAAADs/wUAAQACAAEAAADs/wQAAQACAAEAAADs/wMAAQACAAEAAADs/wIAAQACAAEAAADs/wEAAQACAAEAAADs/wAAAQACAAEAAADs////AQACAAEAAADs//7/AQACAAEAAADs//3/AQACAAEAAADs//z/AQACAAEAAADs//v/AQACAAEAAADs//r/AQACAAEAAADs//n/AQACAAEAAADs//j/AQACAAEAAADs//f/AQACAAEAAADt//f/AQACAAEAAADu//f/AQACAAEAAADv//f/AQACAAEAAADw//f/AQACAAEAAADx//f/AQACAAEAAADy//f/AQACAAEAAADz//f/AQACAAEAAAD0//f/AQACAAEAAAD1//f/AQACAAEAAAD2//f/AQACAAEAAAD3//f/AQACAAEAAAD4//f/AQACAAEAAAD4//b/AQACAAEAAAD4//X/AQACAAEAAAD4//T/AQACAAEAAAD4//P/AQACAAEAAADm//L/AQABAAAAAADm//H/AQABAAAAAADm//D/AQABAAAAAADm/+//AQABAAAAAADm/+7/AQABAAAAAADm/+3/AQABAAAAAADm/+z/AQABAAAAAADm/+v/AQABAAAAAADl/+v/AQABAAAAAADk/+v/AQABAAAAAADk/+f/AQABAAAAAADl/+f/AQABAAAAAADm/+f/AQABAAAAAADm/+b/AQABAAAAAADm/+X/AQABAAAAAADm/+T/AQABAAAAAADm/+P/AQABAAAAAADm/+L/AQABAAAAAADm/+H/AQABAAAAAADm/+D/AQABAAAAAADm/9//AQABAAAAAADn/9//AQABAAAAAADo/9//AQABAAAAAADp/9//AQABAAAAAADq/9//AQABAAAAAADr/9//AQABAAAAAADs/9//AQABAAAAAADt/9//AQABAAAAAADu/9//AQABAAAAAADv/9//AQABAAAAAADw/9//AQABAAAAAADx/9//AQABAAAAAADy/9//AQABAAAAAADz/9//AQABAAAAAAD0/9//AQABAAAAAAD1/9//AQABAAAAAAD2/9//AQABAAAAAAD3/9//AQABAAAAAAD4/9//AQABAAAAAAD5/9//AQABAAAAAAD6/9//AQABAAAAAAD7/9//AQABAAAAAAD7/97/AQABAAAAAAD6/97/AQABAAAAAAD5/97/AQABAAAAAAD4/97/AQABAAAAAAD4/93/AQABAAAAAAD4/9z/AQABAAAAAAD4/9v/AQABAAAAAAD4/9r/AQABAAAAAAD4/9n/AQABAAAAAAD4/9j/AQABAAAAAAD4/9f/AQABAAAAAAD4/9b/AQABAAAAAAD4/9X/AQABAAAAAAD4/9T/AQABAAAAAAD4/9P/AQABAAAAAAD4/9L/AQABAAAAAAD4/9H/AQABAAAAAAD4/9D/AQABAAAAAAD5/9D/AQABAAAAAAD6/9D/AQABAAAAAAD7/9D/AQABAAAAAAD8/9D/AQABAAAAAAD9/9D/AQABAAAAAAD+/9D/AQABAAAAAAD//9D/AQABAAAAAAAAAND/AQABAAAAAAABAND/AQABAAAAAAACAND/AQABAAAAAAADAND/AQABAAAAAAAEAND/AQABAAAAAAAFAND/AQABAAAAAAAGAND/AQABAAAAAAAHAND/AQABAAAAAADW/+3/AQACAAEAAADW/+z/AQACAAEAAADW/+v/AQACAAEAAADW/+r/AQACAAEAAADW/+n/AQACAAEAAADW/+j/AQACAAEAAADW/+f/AQACAAEAAADW/+b/AQACAAEAAADW/+X/AQACAAEAAADW/+T/AQACAAEAAADW/+P/AQACAAEAAADW/+L/AQACAAEAAADW/+H/AQACAAEAAADW/+D/AQACAAEAAADW/9//AQACAAEAAADW/97/AQACAAEAAADX/97/AQACAAEAAADY/97/AQACAAEAAADY/93/AQACAAEAAADY/9z/AQACAAEAAADP/8z/AQACAAEAAADP/83/AQACAAEAAADP/87/AQACAAEAAADP/8//AQACAAEAAADP/9D/AQACAAEAAADP/9H/AQACAAEAAADP/9L/AQACAAEAAADP/9P/AQACAAEAAADP/9T/AQACAAEAAADP/9X/AQACAAEAAADP/9b/AQACAAEAAADP/9f/AQACAAEAAADP/9j/AQACAAEAAADP/9n/AQACAAEAAADP/9r/AQACAAEAAADP/9v/AQACAAEAAADQ/8z/AQACAAEAAADR/8z/AQACAAEAAADS/8z/AQACAAEAAADT/8z/AQACAAEAAADU/8z/AQACAAEAAADV/8z/AQACAAEAAADW/8z/AQACAAEAAADX/8z/AQACAAEAAADY/8z/AQACAAEAAADZ/8z/AQACAAEAAADa/8z/AQACAAEAAADb/8z/AQACAAEAAADc/8z/AQACAAEAAADd/8z/AQACAAEAAADe/8z/AQACAAEAAADf/8z/AQACAAEAAADg/8z/AQACAAEAAADh/8z/AQACAAEAAADi/8z/AQACAAEAAADj/8z/AQACAAEAAADk/8z/AQACAAEAAADl/8z/AQACAAEAAAA=")
 tile_set = ExtResource("9_muem4")
 
-[connection signal="pressed" from="CanvasLayer/Control_pausemenu/PauseMenu/Button" to="CanvasLayer/Control_pausemenu/PauseMenu" method="_on_button_pressed"]
+[node name="MinigameManager" type="Node" parent="." unique_id=986718518]
+script = ExtResource("10_dp3eg")
+
+[connection signal="pressed" from="CanvasLayer/Control/PauseMenu/Button" to="CanvasLayer/Control/PauseMenu" method="_on_button_pressed"]

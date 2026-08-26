@@ -17,12 +17,12 @@ func _process(_delta: float) -> void:
 func setup_hover_polygon() -> void:
 	hover_effect = Polygon2D.new()
 	hover_effect.polygon = PackedVector2Array([
-		Vector2(0, -32),  # Top
-		Vector2(55.5, 0), # Right
-		Vector2(0, 32),   # Bottom
-		Vector2(-55.5, 0) # Left
+		Vector2(0, -8), 
+		Vector2(16, 0),
+		Vector2(0, 8),  
+		Vector2(-16, 0)
 	])
-	hover_effect.color = Color(1, 1, 1, 0.2)
+	hover_effect.color = Color(1.0, 0.0, 0.0, 0.294)
 	hover_effect.visible = false
 	add_child(hover_effect)
 
