@@ -45,16 +45,18 @@ text = "Resume"
 visible = false
 clip_contents = true
 layout_mode = 3
-anchor_left = 0.071
-anchor_top = 0.120000005
-anchor_right = 0.89500004
-anchor_bottom = 0.86600006
-offset_left = 0.20800018
-offset_top = 0.23999786
-offset_right = -0.040039063
-offset_bottom = -0.16802979
+anchor_left = 0.15100001
+anchor_top = 0.171
+anchor_right = 0.84900004
+anchor_bottom = 0.82900006
+offset_left = 0.04798889
+offset_top = -0.30799866
+offset_right = -0.048034668
+offset_bottom = 0.3079834
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="Tilemap" type="Node2D" parent="." unique_id=380715323]
 process_mode = 1

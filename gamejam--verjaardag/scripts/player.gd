@@ -45,11 +45,6 @@ func _unhandled_input(event: InputEvent) -> void:
 					_advance_to_next_target()
 			else:
 				print("Path was empty, movement cancelled")
-			
-
-func _process(delta: float) -> void:
-	pass
-
 
 func _physics_process(delta: float) -> void:
 	if not is_moving or path.is_empty():

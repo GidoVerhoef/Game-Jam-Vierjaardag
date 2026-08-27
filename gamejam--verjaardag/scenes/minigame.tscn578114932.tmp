@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cdd8hg6fbll64"]
 
-[ext_resource type="Script" uid="uid://blnaeduo53hgm" path="res://scripts/minigame.gd" id="1_5iev5"]
-[ext_resource type="Script" uid="uid://dw8iidw3qmdim" path="res://scripts/minigame_example.gd" id="2_hwsak"]
+[ext_resource type="Script" uid="uid://blnaeduo53hgm" path="res://scenes/minigame.gd" id="1_5iev5"]
+[ext_resource type="Script" uid="uid://dw8iidw3qmdim" path="res://scenes/minigame_example.gd" id="2_hwsak"]
 
 [node name="Minigame_Example" type="Node2D" unique_id=568703234]
 script = ExtResource("1_5iev5")
@@ -24,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.64705884, 0.7764706, 0.8901961, 1)
+color = Color(0.64705884, 0.7764706, 0.8901961, 0.6313726)
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="CanvasLayer/Control/ColorRect" unique_id=2091119227]

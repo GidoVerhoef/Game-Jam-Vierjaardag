@@ -22,7 +22,6 @@ MinigameManager="*uid://cou0x0vregfmu"
 [display]
 
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [file_customization]
 
