@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cdd8hg6fbll64"]
 
-[ext_resource type="Script" uid="uid://blnaeduo53hgm" path="res://scripts/minigame.gd" id="1_5iev5"]
-[ext_resource type="Script" uid="uid://dw8iidw3qmdim" path="res://scripts/minigame_example.gd" id="2_hwsak"]
+[ext_resource type="Script" uid="uid://blnaeduo53hgm" path="res://scripts/minigame_logic/minigame.gd" id="1_5iev5"]
+[ext_resource type="Script" uid="uid://dw8iidw3qmdim" path="res://scripts/minigame_logic/minigame_example.gd" id="2_hwsak"]
 
 [node name="Minigame_Example" type="Node2D" unique_id=568703234]
 script = ExtResource("1_5iev5")

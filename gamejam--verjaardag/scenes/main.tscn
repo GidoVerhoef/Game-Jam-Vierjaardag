@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://yhf4wobdahdr" path="res://scripts/main.gd" id="1_choun"]
 [ext_resource type="Texture2D" uid="uid://cnsao7a6hexdm" path="res://icon.svg" id="2_0wfyh"]
-[ext_resource type="Script" uid="uid://c6iggi0wd3ixg" path="res://pause_menu.gd" id="2_ya4ey"]
-[ext_resource type="Script" uid="uid://b6t1bwukpjchn" path="res://scripts/tilemap.gd" id="3_eb6dy"]
-[ext_resource type="Script" uid="uid://csurt42h1aqnd" path="res://scripts/player.gd" id="4_trceg"]
+[ext_resource type="Script" uid="uid://c6iggi0wd3ixg" path="res://scripts/pause_menu.gd" id="2_ya4ey"]
+[ext_resource type="Script" uid="uid://b6t1bwukpjchn" path="res://scripts/player_&_tilemap_logic/tilemap.gd" id="3_eb6dy"]
+[ext_resource type="Script" uid="uid://csurt42h1aqnd" path="res://scripts/player_&_tilemap_logic/player.gd" id="4_trceg"]
 [ext_resource type="Texture2D" uid="uid://bpw327l2hn8hx" path="res://assets/Player_placeholder.png" id="5_a8y0u"]
-[ext_resource type="Script" uid="uid://od6j4ke36oyl" path="res://scripts/interaction_manager.gd" id="6_jkv2x"]
-[ext_resource type="Script" uid="uid://brk78ke8coluv" path="res://scripts/interactable.gd" id="8_jbj1t"]
+[ext_resource type="Script" uid="uid://od6j4ke36oyl" path="res://scripts/interactable_logic/interaction_manager.gd" id="6_jkv2x"]
+[ext_resource type="Script" uid="uid://brk78ke8coluv" path="res://scripts/interactable_logic/interactable.gd" id="8_jbj1t"]
 [ext_resource type="TileSet" uid="uid://6miaf07w7twv" path="res://tileset.tres" id="9_muem4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_krr40"]
