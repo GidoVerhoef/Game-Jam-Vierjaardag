@@ -1,6 +1,5 @@
 extends Node2D
 
-var paused: bool = false
 # Called when the node enters the scene tree for the first time.
 # Interactable nodes need to be added here to register then as interactable
 func _ready() -> void:

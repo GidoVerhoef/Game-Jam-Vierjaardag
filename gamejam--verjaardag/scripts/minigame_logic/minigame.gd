@@ -18,7 +18,6 @@ func resize_to_panel(panel: Control) -> void:
 	var scaled_size: Vector2 = DESIGN_SIZE * scale_factor
 	canvas_layer.offset = panel.global_position + (panel.size - scaled_size) / 2
 
-
 func start() -> void:
 	print("Minigame started")
 

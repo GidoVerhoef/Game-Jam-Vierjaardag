@@ -10,12 +10,9 @@ var minigame_container: Control
 
 func setup(container: Control) -> void:
 	minigame_container = container
-	
-	#minigame_container.size = Vector2(600, 400)
-	#minigame_container.position = (
-	#	get_viewport().get_visible_rect().size - minigame_container.size
-	#) / 2
 
+func is_minigame_active() -> bool:
+	return current_minigame != null
 
 func start_minigame(minigame_id: String) -> void:
 	if minigame_container == null:

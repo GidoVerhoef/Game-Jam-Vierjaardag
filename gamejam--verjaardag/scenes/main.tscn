@@ -18,6 +18,24 @@ script = ExtResource("1_choun")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=372238811]
 
+[node name="Control_minigame" type="Control" parent="CanvasLayer" unique_id=518242715]
+top_level = true
+clip_contents = true
+layout_mode = 3
+anchor_left = 0.15100001
+anchor_top = 0.171
+anchor_right = 0.84900004
+anchor_bottom = 0.82900006
+offset_left = 0.04798889
+offset_top = -0.30799866
+offset_right = -0.048034668
+offset_bottom = 0.3079834
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
 [node name="Control_pausemenu" type="Control" parent="CanvasLayer" unique_id=1794558817]
 layout_mode = 3
 anchors_preset = 8
@@ -41,25 +59,7 @@ offset_right = 35.0
 offset_bottom = 15.5
 text = "Resume"
 
-[node name="Control_minigame" type="Control" parent="CanvasLayer" unique_id=518242715]
-visible = false
-clip_contents = true
-layout_mode = 3
-anchor_left = 0.15100001
-anchor_top = 0.171
-anchor_right = 0.84900004
-anchor_bottom = 0.82900006
-offset_left = 0.04798889
-offset_top = -0.30799866
-offset_right = -0.048034668
-offset_bottom = 0.3079834
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
 [node name="Tilemap" type="Node2D" parent="." unique_id=380715323]
-process_mode = 1
 script = ExtResource("3_eb6dy")
 
 [node name="Player" type="Node2D" parent="Tilemap" unique_id=1604619745]

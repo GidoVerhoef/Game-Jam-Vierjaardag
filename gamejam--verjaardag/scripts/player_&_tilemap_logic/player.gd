@@ -14,18 +14,15 @@ var is_moving: bool = false
 
 func _ready() -> void:
 	# Snap initial position to tile center
-	#print(layermin1, layer1, layer2)
 	var current_tile = layer0.local_to_map(global_position)
 	global_position = layer0.map_to_local(current_tile)
-	#print("Player initial position (snapped to center): ", global_position)
 
 func _unhandled_input(event: InputEvent) -> void:
+	if MinigameManager.is_minigame_active(): return
+	
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			var click_pos = get_global_mouse_position()
-			#print("\nNew movement requested")
-			#print("From: ", global_position)
-			#print("To: ", click_pos)
 			
 			var new_path = MovementUtils.get_path_to_tile(
 				global_position,
@@ -38,10 +35,8 @@ func _unhandled_input(event: InputEvent) -> void:
 				path = new_path
 				is_moving = true
 				target_position = path[0]
-				#print("Path accepted, first target: ", target_position)
 				# Validate that target is different from current position
 				if target_position.distance_to(global_position) < arrival_threshold:
-					#print("Warning: First target too close to current position!")
 					_advance_to_next_target()
 			else:
 				print("Path was empty, movement cancelled")
@@ -51,7 +46,6 @@ func _physics_process(delta: float) -> void:
 		return
 		
 	var distance_to_target = global_position.distance_to(target_position)
-	#print("Distance to target: ", distance_to_target)
 	
 	if distance_to_target < arrival_threshold:
 		# Snap to exact center when close enough
