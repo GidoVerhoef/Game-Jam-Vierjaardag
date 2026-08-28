@@ -4,7 +4,8 @@ var current_minigame: Node = null
 var minigame_container: Control
 
 @export var minigame_scenes: Dictionary = {
-	"minigame": preload("res://scenes/minigame.tscn")
+	"minigame": preload("res://scenes/minigame.tscn"),
+	"stage_minigame": preload("res://scenes/stage_minigame.tscn")
 }
 
 
@@ -43,7 +44,7 @@ func start_minigame(minigame_id: String) -> void:
 	minigame_container.show()
 
 
-func _on_minigame_finished(result) -> void:
+func _on_minigame_finished(result: bool) -> void:
 	print("Minigame finished: ", result)
 	stop_minigame()
 

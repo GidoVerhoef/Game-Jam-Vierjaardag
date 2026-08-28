@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://diyj7pyydubkt"]
+
+[ext_resource type="Texture2D" uid="uid://bvwcymus6ukem" path="res://assets/minigame_border.png" id="1_5nmhm"]
+
+[node name="NinePatchRect" type="NinePatchRect" unique_id=966921970]
+z_index = 20
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5nmhm")
+region_rect = Rect2(0, 0, 640, 640)
+patch_margin_left = 145
+patch_margin_top = 145
+patch_margin_right = 145
+patch_margin_bottom = 145
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Label" type="Label" parent="." unique_id=542851886]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.15, 0.15)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 43
+text = "Text"
+horizontal_alignment = 1
+vertical_alignment = 1
