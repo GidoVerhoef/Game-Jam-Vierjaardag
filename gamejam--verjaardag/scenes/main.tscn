@@ -89,7 +89,7 @@ texture = ExtResource("2_0wfyh")
 [node name="Interactable" type="Area2D" parent="Tilemap/Computer" unique_id=738998556]
 position = Vector2(173, -52)
 script = ExtResource("8_jbj1t")
-minigame = "minigame"
+minigame = "wc_minigame"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/Computer/Interactable" unique_id=894783597]
 shape = SubResource("RectangleShape2D_krr40")

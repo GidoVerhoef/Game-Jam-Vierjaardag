@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://coiih8vgs0hkb"]
+
+[ext_resource type="Script" uid="uid://blnaeduo53hgm" path="res://scripts/minigame_logic/minigame.gd" id="1_c7y21"]
+[ext_resource type="Script" uid="uid://cb0ke5yh05agh" path="res://scenes/control_brush.gd" id="2_lr8be"]
+[ext_resource type="Script" uid="uid://b6lls2fdbuugx" path="res://scripts/minigame_logic/DirtSpawner.gd" id="2_r1uh0"]
+[ext_resource type="Texture2D" uid="uid://ddofd8muf1k8t" path="res://assets/WcBorstel.png" id="3_r1uh0"]
+[ext_resource type="Texture2D" uid="uid://bdhiyx6sehnvs" path="res://assets/toilet.png" id="4_ca1a4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yf5fn"]
+radius = 68.007355
+
+[node name="Minigame_Example" type="Node2D" unique_id=568703234]
+script = ExtResource("1_c7y21")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=322323245]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=804206698]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Node2D" type="Node2D" parent="CanvasLayer/Control" unique_id=1161162479]
+script = ExtResource("2_r1uh0")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=1567081019]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.8787126, 0.9239255, 0.96452373, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Toilet" type="Sprite2D" parent="CanvasLayer/Control" unique_id=1465722947]
+position = Vector2(584, 327)
+texture = ExtResource("4_ca1a4")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="CanvasLayer/Control" unique_id=1688263835]
+z_index = 1
+scale = Vector2(0.505, 0.505)
+script = ExtResource("2_lr8be")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Control/CharacterBody2D" unique_id=590742981]
+position = Vector2(-107, 97)
+shape = SubResource("CircleShape2D_yf5fn")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/CharacterBody2D" unique_id=1401404464]
+texture = ExtResource("3_r1uh0")

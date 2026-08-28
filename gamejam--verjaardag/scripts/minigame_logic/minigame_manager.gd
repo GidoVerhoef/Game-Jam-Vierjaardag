@@ -4,7 +4,8 @@ var current_minigame: Node = null
 var minigame_container: Control
 
 @export var minigame_scenes: Dictionary = {
-	"minigame": preload("res://scenes/minigame.tscn")
+	"minigame": preload("res://scenes/minigame.tscn"),
+	"wc_minigame": preload("res://scenes/wc_minigame.tscn")
 }
 
 
